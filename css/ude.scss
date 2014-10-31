@@ -1,0 +1,26 @@
+$center: 0 auto;
+body{
+}
+#displayItems{
+	.item{
+		.itemname{
+			word-break: break-all;
+			text-align: center;
+			font-family: sans-serif;
+			font-size: 15px;
+		}
+		.itemPrice{
+			@extend .itemname;
+		}
+		.productImage{
+			@extend .itemname;
+			display: block;
+			margin:$center;
+		}
+	}
+	.rating{
+		text-align: center;
+		margin: 0 auto;
+		@extend .itemname;
+	}
+}

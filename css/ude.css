@@ -1,0 +1,11 @@
+#displayItems .item .itemname, #displayItems .item .itemPrice, #displayItems .item .productImage, #displayItems .item .rating {
+  word-break: break-all;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 15px; }
+#displayItems .item .productImage {
+  display: block;
+  margin: 0 auto; }
+#displayItems .rating {
+  text-align: center;
+  margin: 0 auto; }
