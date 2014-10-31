@@ -1,6 +1,5 @@
 jQuery.support.cors = true;
 $.support.cors = true;
-var devKey = "4npra7dguufgq5575kkbdj9p";
 $("#submitSearch").click(function(){
 	var item = document.getElementById("itemSearch").value;
 	$.ajax({
@@ -13,8 +12,12 @@ $("#submitSearch").click(function(){
 	  		apiKey: '4npra7dguufgq5575kkbdj9p'
 	  	},
 	  	success: function(response){
+	  		$('#displayItems').children('div').remove();
 	  		var data = response;
-	  		console.log(data.products);
+	  		for(var i = 0; i < 10; i++){
+	  			$("#displayItems").append("<div class = 'item'><p class = 'itemname'> "+data.products[i].name+ "</p><p class = 'itemPrice'>"+data.products[i].salePrice+"</div>");
+	  		}
 	    }
 	});
+	//https://api.remix.bestbuy.com/v1/products/3365028.json?apiKey=4npra7dguufgq5575kkbdj9p
 });
