@@ -19,5 +19,4 @@ $("#submitSearch").click(function(){
 	  		}
 	  	}
 	});
-	//products/3365028.json?apiKey=4npra7dguufgq5575kkbdj9p
 });
