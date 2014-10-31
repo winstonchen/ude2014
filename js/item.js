@@ -1,6 +1,6 @@
 jQuery.support.cors = true;
 $.support.cors = true;
-function search(){
+function searchItem(){
 	$("#submitSearch").click(function(){
 		var item = document.getElementById("itemSearch").value;
 		$.ajax({
@@ -12,7 +12,7 @@ function search(){
 		  		apiKey: '4npra7dguufgq5575kkbdj9p'
 		  	},
 		  	success: function(response){
-		  		$('#displayItems').children('div').remove();
+		  		$('#displayItems').children().remove();
 		  		var data = response;
 		  		console.log(data);
 		  		for(var i = 0; i < 10; i++){
